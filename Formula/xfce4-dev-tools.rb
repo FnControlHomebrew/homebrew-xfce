@@ -23,6 +23,22 @@ class Xfce4DevTools < Formula
   end
 
   test do
-    assert_predicate prefix, :exist? # stub
+    system "git", "init"
+    system "git", "config", "user.email", "you@example.com"
+    system "git", "config", "user.name", "Your Name"
+
+    touch "foo"
+    system "git", "add", "foo"
+    system "git", "commit", "-m", "Create foo"
+    system "git", "tag", "-a", "v0.1", "-m", "Foo"
+
+    touch "bar"
+    system "git", "add", "bar"
+    system "git", "commit", "-m", "Create bar"
+
+    assert_equal <<~EOS, shell_output("#{bin}/xfce-get-release-notes")
+      Changes since v0.1:
+      - Create bar
+    EOS
   end
 end
