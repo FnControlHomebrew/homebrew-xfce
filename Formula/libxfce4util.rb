@@ -5,6 +5,11 @@ class Libxfce4util < Formula
   sha256 "60598d745d1fc81ff5ad3cecc3a8d1b85990dd22023e7743f55abd87d8b55b83"
   license "LGPL-2.0-or-later"
 
+  bottle do
+    root_url "https://github.com/brewOS/homebrew-xfce/releases/download/libxfce4util-4.16.0"
+    sha256 x86_64_linux: "ef0dc8f078ae52839046a726a1c544d6a09b2b893f9f7049e2e7a011c631f2c4"
+  end
+
   depends_on "intltool" => :build
   depends_on "pkg-config" => :build
   depends_on "glib"
