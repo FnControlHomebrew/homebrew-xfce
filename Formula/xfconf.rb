@@ -14,8 +14,8 @@ class Xfconf < Formula
   depends_on "glib-utils" => :build
   depends_on "intltool" => :build
   depends_on "pkg-config" => :build
+  depends_on "brewos/xfce/libxfce4util"
   depends_on "glib"
-  depends_on "libxfce4util"
 
   uses_from_macos "perl" => :build
 
