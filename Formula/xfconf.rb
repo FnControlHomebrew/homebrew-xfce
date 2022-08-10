@@ -5,6 +5,11 @@ class Xfconf < Formula
   sha256 "652a119007c67d9ba6c0bc7a740c923d33f32d03dc76dfc7ba682584e72a5425"
   license all_of: ["GPL-2.0-only", "LGPL-2.0-only"]
 
+  bottle do
+    root_url "https://github.com/brewOS/homebrew-xfce/releases/download/xfconf-4.16.0"
+    sha256 x86_64_linux: "d933ea909d0dff95c9e41fb3580b1007987b34a15c5c569d836beda75ed5ace2"
+  end
+
   depends_on "gettext" => :build
   depends_on "glib-utils" => :build
   depends_on "intltool" => :build
