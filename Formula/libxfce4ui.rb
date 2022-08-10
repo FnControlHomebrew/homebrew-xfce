@@ -5,6 +5,11 @@ class Libxfce4ui < Formula
   sha256 "d96946ae5af6bf078dda415419e0021909f763ee0020b42f3e26f603e51585f6"
   license "LGPL-2.0-or-later"
 
+  bottle do
+    root_url "https://github.com/brewOS/homebrew-xfce/releases/download/libxfce4ui-4.16.1"
+    sha256 x86_64_linux: "3568c785f5935a1f3ae816a40713e3ddb484804db9fa70fcbc2e478725bf0630"
+  end
+
   depends_on "brewos/xfce/xfce4-dev-tools" => :build
   depends_on "gettext" => :build
   depends_on "intltool" => :build
